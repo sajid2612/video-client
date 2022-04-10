@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="video-client:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/video_client_jar</output-path>
+    <root id="archive" name="video-client.jar">
+      <element id="module-output" name="video-client" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/dependency-jars/picocli-4.6.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
