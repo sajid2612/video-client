@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: dependecy-jars/picocli-4.6.3
+Main-Class: FileClient
+
