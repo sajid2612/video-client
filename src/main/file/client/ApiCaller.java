@@ -138,7 +138,11 @@ public class ApiCaller {
 			if (urlConnection.getResponseCode() == expectedStatus) {
 				httpResponseBodyScanner = new Scanner(urlConnection.getInputStream());
 			} else {
-				httpResponseBodyScanner = new Scanner(urlConnection.getErrorStream());
+				if (urlConnection.getResponseCode() == 401) {
+					httpResponseBodyScanner = new Scanner("User not authorized or incorrect credentials");
+				} else {
+					httpResponseBodyScanner = new Scanner(urlConnection.getErrorStream());
+				}
 			}
 			while (httpResponseBodyScanner.hasNextLine()) {
 				response.write(httpResponseBodyScanner.nextLine().getBytes());
